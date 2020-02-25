@@ -15,7 +15,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build *.md main.js",
+    "build": "parcel build *.md main.js --out-dir public/",
     "dev": "parcel *.md main.js"
   },
   "author": "",
