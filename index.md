@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head></head>
+<head>
+<link rel="stylesheet" type="test/css" href="style.css">
+</head>
 <body>
-<script src="./main.js"></script>
-<div class="container">
+<main class="container">
 
 # Heading Kyle
 
@@ -11,10 +12,12 @@ Some content!
 
 ## Posts
 
-[Salary Transparency](./posts/salary-transparency.md)
+- [Second Worst Interview](./posts/second-worst.md)
 
-[link](https://spaans.ca)
+- [Salary Transparency](./posts/salary-transparency.md)
 
-</div>
+- [link](https://spaans.ca)
+
+</main>
 </body>
 </html>

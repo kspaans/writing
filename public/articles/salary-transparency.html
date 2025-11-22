@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle's Blog</title>
+    <style>
+        :root {
+            --royal-blue: #4169E1;
+            --dark-blue: #1e3a8a;
+            --light-bg: #f3f4f6;
+            --dark-bg: #1f2937;
+            --light-text: #111827;
+            --dark-text: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--light-text);
+        }
+
+        /* Top Navigation */
+        .top-nav {
+            background-color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 0 32px;
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .blog-title {
+            color: var(--royal-blue);
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Side Menu */
+        .side-menu {
+            position: fixed;
+            left: 0;
+            top: 60px;
+            bottom: 0;
+            width: 250px;
+            background-color: white;
+            box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+            padding: 32px 0;
+        }
+
+        .menu-item {
+            display: block;
+            padding: 16px 32px;
+            color: var(--light-text);
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .menu-item:hover {
+            background-color: var(--light-bg);
+            color: var(--royal-blue);
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 250px;
+            margin-top: 60px;
+            padding: 32px;
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .article-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--royal-blue);
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            color: var(--dark-blue);
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        /* Dark theme */
+        body.dark-theme {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+
+        .dark-theme .top-nav,
+        .dark-theme .side-menu,
+        .dark-theme .article-card {
+            background-color: #2d3748;
+        }
+
+        .dark-theme .menu-item {
+            color: var(--dark-text);
+        }
+
+        .dark-theme .menu-item:hover {
+            background-color: #4a5568;
+        }
+
+        /* Theme toggle button */
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--royal-blue);
+            color: var(--royal-blue);
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--royal-blue);
+            color: white;
+        }
+        table {
+          border: 2px solid black;
+        }
+        td {
+          text-align: right;
+          padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-content">
+            <a href="#" class="blog-title">Kyle's Blog</a>
+            <button class="theme-toggle" onclick="toggleTheme()">Dark/Light Mode</button>
+        </div>
+    </nav>
+
+    <aside class="side-menu">
+        <a href="/" class="menu-item">Home</a>
+        <a href="articles/" class="menu-item">Articles</a>
+        <a href="categories/" class="menu-item">Categories</a>
+    </aside>
+
+    <main class="main-content">
+        <div class="content-wrapper">
+            <h1>Salary Transparency</h1>
+            
+            <div class="article-card">
+                <h2>Paying it Forward</h2>
+                <p>
+                  For younger people in the industry, I think it's helpful to
+                  see what can be possible with salary progression. And for my
+                  peers it can help make sure we're all being paid fairly.
+                <p>
+                <p>
+                  I'm including base salary only, as benefits and vacation time
+                  are harder to value, and I haven't had any significant,
+                  liquid equity compenstaion (yet). Sometimes I was consulting,
+                  and I converted my hourly rate to annual income (without
+                  accounting for the differences in taxation or benefits).
+                </p>
+                <table> 
+                  <tr><th>Year</th> <th>Income</th> <th>Exchange Rate</th></tr>
+                  <tr><td>2012</td> <td style="text-align: right;">$70,000</td></tr>
+                  <tr><td>2014</td> <td>$74,500</td> <td>(&pound;41,000)</td></tr>
+                  <tr><td>2015</td> <td>$88,000</td> <td> (&pound;45,000)</td></tr>
+                  <tr><td>2016</td> <td>$166,700</td> <td> ($125,000 USD)</td></tr>
+                  <tr><td>2017</td> <td>$175,000</td> <td> ($135,000 USD)</td></tr>
+                  <tr><td>2018</td> <td>$150,000</td></tr>
+                  <tr><td>2019</td> <td>$175,000</td></tr>
+                  <tr><td>2020</td> <td>$210,000</td></tr>
+                  <tr><td>2021</td> <td>$175,000</td></tr>
+                  <tr><td>2022</td> <td>$200,000</td></tr>
+                  <tr><td>2023</td> <td>$200,000</td></tr>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>

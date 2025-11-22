@@ -2,7 +2,7 @@
   "version": 2,
   "routes": [
     { "src": "^/", "dest": "/public/index.html" },
-    { "src": "^/posts/(.*)", "dest": "/public/posts/$1" },
+    { "src": "^/articles/(.*)", "dest": "/public/articles/$1" },
     { "src": "^/(.*)", "dest": "/public/$1" }
   ]
 }
